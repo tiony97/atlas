@@ -1,0 +1,261 @@
+/* ABOUT PAGE STYLES */
+.about-banner {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	min-height: 50vh;
+	.text-wrapper {
+		background: $text-clr-accent;
+		display: flex;
+		flex-direction: column;
+		padding: 3em;
+		h2 {
+			width: 70%;
+			font-size: 40px;
+			font-weight: 500;
+			color: $text-clr-light;
+			margin-bottom: 0.1em;
+		}
+		p {
+			width: 70%;
+			font-size: 22px;
+			font-weight: 400;
+			color: $txt-black;
+		}
+	}
+
+	.image-wrapper {
+		position: relative;
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.about-details {
+	padding: 3em 0;
+	.container {
+		p {
+			font-size: 18px;
+			line-height: 24px;
+			color: $txt-black;
+			margin-bottom: 1em;
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.values-grid {
+	position: relative;
+	height: fit-content;
+	width: 100vw;
+	max-width: 100vw;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	.value {
+		min-height: 200px !important;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1em 1.4em;
+		background: $txt-black;
+		border-right: 1px solid $text-clr-light;
+		&:last-of-type {
+			border-right: none;
+		}
+		.content {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 2em;
+			h4 {
+				font-size: 18px;
+				line-height: 24px;
+				font-weight: 600;
+				color: $accent-clr;
+				margin-bottom: 0.1em;
+			}
+			p {
+				font-size: 16px;
+				line-height: 24px;
+				font-weight: 400;
+				color: $text-clr-light;
+			}
+		}
+
+		a {
+			align-self: flex-end;
+			width: auto;
+			height: auto;
+			img {
+				width: 40px;
+				height: 40px;
+				object-fit: contain;
+			}
+		}
+	}
+}
+
+.stories {
+	background-color: #1f2147;
+	padding: 3em 0;
+	.container {
+		h2 {
+			font-size: 32px;
+			line-height: 40px;
+			color: $text-clr-light;
+			margin-bottom: 2em;
+		}
+
+		/* Tab Area */
+		.tab-container {
+			width: 100%;
+			min-height: 50vh;
+			display: grid;
+			grid-template-columns: 1fr 3fr;
+			.tabs {
+				display: flex;
+				flex-direction: column;
+				list-style: none;
+				padding: 0;
+				padding-right: 1.5em;
+				margin: 0;
+				//border-bottom: 1px solid #ccc;
+
+				.tab {
+					position: relative;
+					cursor: pointer;
+					padding: 20px;
+					border-bottom: 1px solid #ccc;
+					color: $text-clr-light;
+					transition: all 0.3s ease-in-out;
+
+					&.active {
+						color: #007bff;
+						font-weight: bold;
+						border-bottom-color: $text-clr-accent;
+					}
+
+					.tab-title {
+						font-size: 16px;
+						line-height: 1.4;
+					}
+
+					.tab-icon {
+						position: absolute;
+						top: 10px;
+						right: 10px;
+						font-size: 20px;
+						color: #007bff;
+					}
+				}
+			}
+
+			.tab-content {
+				.tab-panel {
+					display: none;
+					&.active {
+						display: block;
+					}
+
+					//Tab 1 Content
+					.facts {
+						width: 100%;
+						height: 100%;
+						border-left: 2px solid $text-clr-light;
+						.fact {
+							width: 100%;
+							position: relative;
+							padding-left: 4em;
+							p {
+								width: 40%;
+								font-size: 20px;
+								color: $text-clr-light;
+							}
+							&::before {
+								content: "";
+								position: absolute;
+								top: 30%;
+								left: -11px;
+								width: 20px;
+								height: 20px;
+								border-radius: 50%;
+								background-color: $text-clr-accent;
+							}
+						}
+					}
+
+					//Tab 2 Content
+					.group {
+						width: 100%;
+						height: 100%;
+						* {
+							margin: 0;
+						}
+						h4 {
+							font-size: 22px;
+							line-height: 24px;
+							color: $text-clr-light;
+						}
+						.sec-title {
+							font-size: 24px;
+							line-height: 24px;
+							color: $text-clr-accent;
+							margin: 0.5em 0;
+							margin-bottom: 1em;
+						}
+						.list {
+							width: 70%;
+							display: grid;
+							grid-template-columns: repeat(2, 1fr);
+							grid-row-gap: 1em;
+							.item {
+								display: flex;
+								align-items: center;
+								img {
+									width: 15px;
+									height: 15px;
+									object-fit: contain;
+									margin-right: 0.5em;
+								}
+								p {
+									font-size: 16px;
+									color: $text-clr-light;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.partners {
+	padding: 3em 0;
+	background-color: $txt-black;
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 4fr;
+		h3 {
+			font-size: 32px;
+			line-height: 40px;
+			color: $text-clr-light;
+		}
+		.partner-grid {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			img {
+				width: 80%;
+				height: 80%;
+				object-fit: contain;
+			}
+		}
+	}
+}

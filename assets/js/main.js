@@ -24,8 +24,9 @@ document.getElementById("search-icon").addEventListener("click", function (e) {
 	]);
 });
 
+//Home banner Slider
 $(document).ready(function () {
-	const swiper = new Swiper(".swiper-container", {
+	const swiper = new Swiper(".banner-swiper", {
 		loop: true,
 		pagination: {
 			el: ".swiper-pagination",
@@ -34,6 +35,46 @@ $(document).ready(function () {
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
+		},
+	});
+});
+
+$(document).ready(function () {
+	const swiper = new Swiper(".cs-swiper", {
+		loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		slidesPerView: 3,
+		spaceBetween: 20,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
+			480: {
+				slidesPerView: 1,
+			},
+		},
+	});
+});
+
+$(document).ready(function () {
+	const swiper = new Swiper(".industry-swiper", {
+		loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		slidesPerView: 5,
+		spaceBetween: 20,
+		breakpoints: {
+			768: {
+				slidesPerView: 5,
+			},
+			480: {
+				slidesPerView: 1,
+			},
 		},
 	});
 });
